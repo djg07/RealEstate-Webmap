@@ -1,0 +1,27 @@
+#container {
+    background-color:black;
+    width: 100vw;
+    height: 100vh;
+}
+
+#topBar {
+    height:20%;
+    width:100%;
+    background-color:red;
+}
+
+#layersBar {
+    width:20%;
+    height:80%;
+    background-color:green;
+    float:right;
+}
+
+#mapContainer {
+    width:80%;
+    height:80%;
+    background-color:teal;
+
+
+}
+
