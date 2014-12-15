@@ -16,8 +16,8 @@ angular.module('myApp.view1', ['ngRoute'])
   // ...
 })
 
-.controller('MapController', function($scope) {  //working
-  //$scope.mapTitle = 'RE App';
+.controller('MapController', function($scope) {  //working //Separate the controllers out into their own files!
+  //$scope.mapTitle = 'RE App';                                 //see tut at 13:11
       var map = new ol.Map({
         target: 'map',
         layers: [
