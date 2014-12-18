@@ -22,15 +22,20 @@ angular.module('myApp.view1', ['ngRoute'])
         target: 'map',
         layers: [
           new ol.layer.Tile({
-            source: new ol.source.MapQuest({layer: 'sat'})
+            title: "Global Imagery",
+            source: new ol.source.TileWMS({
+              url: 'http://maps.opengeo.org/geowebcache/service/wms',
+              params: {LAYERS: 'openstreetmap', VERSION: '1.1.1'}
+            })
           })
         ],
         view: new ol.View({
-          center: ol.proj.transform([-79.45,43.65], 'EPSG:4326', 'EPSG:3857'),
-          zoom: 11
+          projection: 'EPSG:4326',
+          center: [0, 0],
+          zoom: 0,
+          maxResolution: 0.703125
         })
       });
-
   // ...
-});
+})
 
